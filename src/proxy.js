@@ -1,7 +1,3 @@
-let proxy;
+export const proxy = process.env.PROXY;
 
-if (process.env.ENVIRONMENT === "production") {
-  proxy = `https://finance-production.up.railway.app/`;
-} else {
-  proxy = `https://localhost:${5000}`;
-}
+// https://finance-production.up.railway.app/
