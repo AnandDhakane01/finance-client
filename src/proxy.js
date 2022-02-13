@@ -1,1 +1,1 @@
-export const proxy = process.env.PROXY;
+export const proxy = process.env.REACT_APP_PROXY;
