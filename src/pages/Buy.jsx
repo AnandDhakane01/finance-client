@@ -8,6 +8,7 @@ export default function Buy() {
   const [formData, setformData] = useState({ symbol: "", no_of_shares: 0 });
 
   const handleChange = (e) => {
+    
     setformData({
       ...formData,
       [e.target.name]: e.target.value,
