@@ -9,7 +9,9 @@ const getStocksData = async () => {
   };
   try {
     const response = await fetch(`${proxy}/stocks`, requestOptions).then(
-      (res) => res.json()
+      (res) => {
+        return res.json();
+      }
     );
     return response;
   } catch (err) {

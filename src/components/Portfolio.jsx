@@ -29,7 +29,7 @@ const Portfolio = ({ stocksData }) => {
                   <td className="px-4 py-5">{stock.no_of_shares}</td>
                   <td className="px-4 py-5 text-lg ">${stock.price}</td>
                   <td className="px-4 py-5 text-lg ">
-                    ${stock.price * stock.no_of_shares}
+                    ${parseFloat(stock.price * stock.no_of_shares).toFixed(2)}
                   </td>
                 </tr>
               ))}
