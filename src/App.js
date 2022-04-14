@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="bg-gray-900 min-h-screen text-white">
       <Router>
+
         <Switch>
           {/* Private Routes*/}
           <PrivateRoute exact path="/" component={Index} />
@@ -31,6 +32,7 @@ function App() {
             component={withRouter(Register)}
           />
         </Switch>
+
       </Router>
     </div>
   );
