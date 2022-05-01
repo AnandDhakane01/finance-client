@@ -18,6 +18,7 @@ export default function SideBar({ total, stocksData, valueOfShares }) {
           <p className="uppercase text-gray-500">Value of Shares</p>
           <p className="text-xl">${valueOfShares}</p>
         </div>
+        {/* changes so that heroku redeploys */}
         {/* <div className="">
           <p className="uppercase text-gray-500">Total P&L</p>
           <p className="text-xl">$11000</p>
