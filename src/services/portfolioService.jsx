@@ -6,6 +6,7 @@ const getStocksData = async () => {
   const requestOptions = {
     method: "GET",
     headers: headers,
+    
   };
   try {
     const response = await fetch(`${proxy}/stocks`, requestOptions).then(
