@@ -1,4 +1,4 @@
-# FINANCE
+# FINANCE - CLIENT
 
 https://finance-client.herokuapp.com
 
