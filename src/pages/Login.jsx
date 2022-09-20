@@ -18,9 +18,13 @@ export default function Login() {
     e.preventDefault();
     if (formData.userName && formData.password) {
       login(formData).then((res) => {
-        setformData({ userName: "", password: "" });
-        localStorage.setItem("accessToken", res.accessToken);
-        history.push("/");
+        if (res.error) {
+          alert(res.message);
+        } else {
+          setformData({ userName: "", password: "" });
+          localStorage.setItem("accessToken", res.accessToken);
+          history.push("/");
+        }
       });
     }
   };

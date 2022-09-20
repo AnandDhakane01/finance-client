@@ -44,8 +44,9 @@ export default function Sell() {
                 className="bg-gray-800 rounded border appearance-none outline-none border-none py-2 text-base px-5"
                 name="symbol"
                 onChange={handleChange}
+                defaultValue={"default"}
               >
-                <option disabled selected>
+                <option disabled value="default">
                   Select
                 </option>
                 {stocksList &&
