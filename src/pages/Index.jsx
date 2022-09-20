@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import IndexMain from "../components/Portfolio";
 import SideBar from "../components/SideBar";
-import RecentTrade from "../components/RecentTrades";
+// import RecentTrade from "../components/RecentTrades";
 import getStocksData from "../services/portfolioService";
 
 const Index = () => {
@@ -46,7 +46,7 @@ const Index = () => {
           stocksData={stocksData}
         ></SideBar>
       </div>
-      <RecentTrade />
+      {/* <RecentTrade /> */}
     </>
   );
 };
