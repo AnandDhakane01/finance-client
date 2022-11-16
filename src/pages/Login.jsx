@@ -1,7 +1,9 @@
 import { React, useState } from "react";
 import { login } from "../services/authService";
+import { proxy } from "../proxy";
 import { useHistory } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import Cookies from "js-cookie";
 
 export default function Login() {
   const history = useHistory();
@@ -27,6 +29,12 @@ export default function Login() {
         }
       });
     }
+  };
+
+  const handleGoogleOauth = async () => {
+    window.open(`${proxy}/google`, "_self");
+    setformData({ userName: "", password: "" });
+    localStorage.setItem("accessToken", Cookies.get("accessToken"));
   };
 
   return (
@@ -58,10 +66,24 @@ export default function Login() {
             />
           </div>
           <button
-            className="mt-4 py-2 px-4 rounded-lg bg-blue-400"
+            className="mt-4 py-2 px-3 rounded-lg bg-blue-400"
             type="submit"
           >
             Login
+          </button>
+          <button
+            href=""
+            className="ml-3 mt-4 py-2 px-3 rounded-lg bg-blue-600"
+            onClick={handleGoogleOauth}
+          >
+            <span className="float-left mr-2">
+              <img
+                className="google-icon"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                alt=""
+              />
+            </span>
+            Sign in with google
           </button>
         </form>
       </div>
