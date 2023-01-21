@@ -1,6 +1,6 @@
 # FINANCE - CLIENT
 
-https://finance-client.herokuapp.com
+https://finance-client-eight.vercel.app/register
 
 A website via which users can "buy" and "sell" stocks.
 
