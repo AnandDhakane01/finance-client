@@ -71,7 +71,7 @@ export default function Login() {
           >
             Login
           </button>
-          <button
+          {/* <button
             href=""
             className="ml-3 mt-4 py-2 px-3 rounded-lg bg-blue-600"
             onClick={handleGoogleOauth}
@@ -84,7 +84,7 @@ export default function Login() {
               />
             </span>
             Sign in with google
-          </button>
+          </button> */}
         </form>
       </div>
     </>
